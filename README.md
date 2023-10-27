@@ -33,7 +33,7 @@ We divide it into two steps (1) Pre-training/Finetuning (2) Evaluating.
 
 ### 1. Pre-training / Fine-tuning
 
-Before running the actual pretraining commands, the code requires you to download the dataset. pre-training datasets is stored in `data.bin`. And the datasets can be download through [website](https://drive.google.com/file/d/1kbOciSHXSOAFV7X1CuL_nm9_2sxKeDfU/view).
+Before running the actual pretraining commands, the code requires you to download the dataset. Pre-training datasets is stored in `data.bin`. And the datasets can be download through [website](https://drive.google.com/file/d/1kbOciSHXSOAFV7X1CuL_nm9_2sxKeDfU/view).
 
 **1.1 Pretraining**
 
