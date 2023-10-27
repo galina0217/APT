@@ -137,7 +137,7 @@ class NewDataEdgelist(object):
     def __init__(self, root, name):
         print("using new data")
         self.name = name
-        datasets = json.load(open('./dataset.json'))
+        datasets = json.load(open('./dataset/dataset.json'))
         print("####" + name + "####")
         dataset = name
         dataset_str = datasets[dataset]['dataset']

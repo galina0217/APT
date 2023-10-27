@@ -173,9 +173,9 @@ def option_update(opt):
     )
     '''
     if args.finetune:
-        opt.model_name = "GCC_perturb_16384_0.001_self_finetune_" + args.dataset
+        opt.model_name = "apt_finetune_" + args.dataset
     else:
-        opt.model_name = "GCC_perturb_16384_0.001_self"
+        opt.model_name = "apt"
 
     if opt.load_path is None:
         opt.model_folder = os.path.join(opt.model_path, opt.model_name)

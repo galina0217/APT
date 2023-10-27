@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-# File Name: train_graph_moco.py
-# Author: Jiezhong Qiu
-# Create Time: 2019/12/13 16:44
-# TODO:
-
 import argparse
 import os
 import time
@@ -134,7 +127,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser("argument for training")
     # fmt: off
     parser.add_argument("--load-path",
-                        default="saved/GCC_perturb_16384_0.001_self/current.pth")
+                        default="saved/apt/current.pth")
     parser.add_argument("--dataset", type=str, default="imdb-binary",
                         choices=["dgl", "wikipedia", "blogcatalog", "usa_airport", "brazil_airport", "europe_airport",
                                  "cora", "citeseer", "pubmed", "squirrel", "texas", "cornell", "wisconsin", "youtube",

@@ -1,8 +1,8 @@
-# Better with Less: Data-Active Pre-training of Graph Neural Networks
+# Better with Less: A Data-Active Perspective on Pre-Training Graph Neural Networks
 
 ## About
 
-This project is the implementation of paper "Better with Less: Data-Active Pre-training of Graph Neural Networks"
+This project is the implementation of paper "Better with Less: A Data-Active Perspective on Pre-Training Graph Neural Networks"
 
 ## Dependencies
 The script has been tested running under Python 3.7.10, with the following packages installed (along with their dependencies):
@@ -28,7 +28,6 @@ In addition, CUDA 10.0 has been used in our project. Although not all dependenci
 
 `gcc&utils`: contains the code of models.
 
-
 ## Usage: How to run the code
 We divide it into two steps (1) Pre-training/Finetuning (2) Evaluating.
 
@@ -40,17 +39,17 @@ Before running the actual pretraining commands, the code requires you to downloa
 
 
 ```bash
-python train_al.py \
+python train_apt.py \
   --model-path <saved file> \
   --threshold <uncertainty threshold for choosing samples >
   --tb-path <tensorboard file> \
   --dgl_file <dataset in bin format> \
   --moco
 ```
-For more detail, the help information of the main script `train_al.py` can be obtain by executing the following command.
+For more detail, the help information of the main script `train_apt.py` can be obtain by executing the following command.
 
 ```bash
-python train_al.py -h
+python train_apt.py -h
 
 optional arguments:
   --max_period MAX_PERIOD
@@ -76,7 +75,7 @@ optional arguments:
 **Demo:**	
 
 ```bash
-python train_al.py \
+python train_apt.py \
   --max_period 6 \
   --threshold 3 \
   --threshold_g 3.5 \
@@ -144,6 +143,19 @@ bash evaluate_finetune.sh <load path>
 bash scripts/evaluate_finetune.sh saved
 ```
 
+## Citing APT
+
+If you use APT in your research or wish to refer to the baseline results, please use the following BibTeX.
+
+```
+@inproceedings{
+xu2023better,
+title={Better with Less: A Data-Centric Prespective on Pre-Training Graph Neural Networks},
+author={Jiarong Xu, Renhong Huang, Xin Jiang, Yuxuan Cao, Carl Yang, Chunping Wang, Yang Yang},
+booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+year={2023},
+}
+```
 
 ## Acknowledgements
 Part of this code is inspired by Qiu et al.'s [GCC: Graph Contrastive Coding](https://github.com/THUDM/GCC).
